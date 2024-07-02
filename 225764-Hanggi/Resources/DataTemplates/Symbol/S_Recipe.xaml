@@ -1,0 +1,67 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <DataTemplate x:Key="PlanetDirection">
+        <Image Source="/Resources/Images/Recipe/PlanetDirection.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="PlanetRatio">
+        <Image Source="/Resources/Images/Recipe/PlanetRatio.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="PlanetSpeed">
+        <Image Source="/Resources/Images/Recipe/PlanetSpeed.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="RotorDirection">
+        <Image Source="/Resources/Images/Recipe/RotorDirection.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="RotorSpeed">
+        <Image Source="/Resources/Images/Recipe/RotorSpeed.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="RotorTime">
+        <Image Source="/Resources/Images/Recipe/RotorTime.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="TiltAngle1">
+        <Image Source="/Resources/Images/Recipe/TiltAngle1.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="TiltAngle2">
+        <Image Source="/Resources/Images/Recipe/TiltAngle2.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="TiltMode">
+        <Image Source="/Resources/Images/Recipe/TiltMode.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="TiltSpeed">
+        <Image Source="/Resources/Images/Recipe/TiltSpeed.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="TiltTime">
+        <Image Source="/Resources/Images/Recipe/TiltTime.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="Glasses">
+        <Image Source="/Resources/Images/Recipe/Glasses.png" Stretch="Fill" Width="113" Height="113" />
+    </DataTemplate>
+    <DataTemplate x:Key="StepCopy">
+        <Image Source="/Resources/Images/Recipe/StepCopy.png" Stretch="Fill" Width="60" Height="52" />
+    </DataTemplate>
+    <DataTemplate x:Key="Arrows">
+        <Image Source="/Resources/Images/Recipe/Arrows.png" Stretch="Fill"  Width="34" Height="34" />
+    </DataTemplate>
+    <DataTemplate x:Key="Rotate">
+        <Image Source="/Resources/Images/Recipe/Rotate.png" Stretch="Fill"  Width="34" Height="34" />
+    </DataTemplate>
+    <DataTemplate x:Key="RotateLeft">
+        <Image Source="/Resources/Images/Recipe/RotateLeft.png" Stretch="Fill" Width="34" Height="34" />
+    </DataTemplate>
+    <DataTemplate x:Key="RotateRight">
+        <Image Source="/Resources/Images/Recipe/RotateRight.png" Stretch="Fill"  Width="34" Height="34" />
+    </DataTemplate>
+    <DataTemplate x:Key="X">
+        <Image Source="/Resources/Images/Recipe/X.png" Stretch="Fill"  Width="34" Height="34" />
+    </DataTemplate>
+    <DataTemplate x:Key="Glasses2">
+        <Image Source="/Resources/Images/Recipe/Glasses2.png" Stretch="Fill"  Width="65" Height="30" />
+    </DataTemplate>
+    <DataTemplate x:Key="D_Add">
+        <Image Source="/Resources/Images/Recipe/Add.png" Stretch="Fill"  Width="60" Height="60" />
+    </DataTemplate>
+    
+</ResourceDictionary>

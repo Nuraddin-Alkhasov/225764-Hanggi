@@ -1,0 +1,101 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe_IE"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vw="http://inosoft.com/visiwin7" 
+	Width="1920" Height="1080" Background="{DynamicResource DialogSurroundBrush}" >
+    <Grid Width="1000" Height="691">
+        <vw:Border Background="White"  Opacity="0.7" CornerRadius="5" Margin="-5">
+            <Border.Effect>
+                <BlurEffect Radius="10"/>
+            </Border.Effect>
+        </vw:Border>
+        <Border   BorderBrush="Black" BorderThickness="0"  Background="{DynamicResource FP_Dark}" CornerRadius="5" >
+            <Grid>
+                <Grid Margin="10,0,10,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="12" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="12" />
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    <vw:TextBlock x:Name="HeaderText" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold"  LocalizableText="@RecipeSystem.IE.Text13" Width="400"  />
+
+                    <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource B_Close}" Width="80" Height="40" Text="X" Command="{Binding CloseDialogViewCommand}" Margin="0,0,0,0"/>
+                    <Border Grid.Row="1" VerticalAlignment="Top" Background="{DynamicResource FP_Red}"  Height="2" CornerRadius="2" />
+
+                    <TabControl Grid.Row="2" TabStripPlacement="Left" Margin="10,0,10,0" BorderBrush="black" BorderThickness="1" SelectionChanged="TabControl_SelectionChanged">
+                        <TabItem x:Name="btn1"  Height="263" Width="160" Style="{DynamicResource TI_Filter}"  Header="{vw:LocalizedTextExtension LocalizedText=@RecipeSystem.IE.Text2}" Margin="0,-3,0,0" PreviewTouchDown="Btn1_PreviewTouchDown" >
+                            <DataGrid x:Name="toImport" ItemsSource="{Binding RecipesToImport}" Style="{DynamicResource DG_Standart}" BorderThickness="2" BorderBrush="{DynamicResource FP_BorderBrush}" AutoGenerateColumns="False" IsReadOnly="True" RowStyle="{DynamicResource DGR_IE}" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" SelectionChanged="toImport_SelectionChanged" Unloaded="toImport_Unloaded">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.IE.Text5}" Width="150">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <vw:CheckBox HorizontalAlignment="Center" Width="35" Height="35" IsChecked="{Binding Path=isSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text16}" Width="150">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <vw:Button HorizontalAlignment="Center" IsEnabled="{Binding isExisting}" Style="{DynamicResource B_Gray_ns}" Width="70" Height="35" Click="Button_Click"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.IE.Text15}" Binding="{Binding Type}" Width="150"/>
+
+                                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.IE.Text14}" Binding="{Binding Name}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                        <TabItem x:Name="btn2"  Height="264" Width="160" Style="{DynamicResource TI_Filter}"  Header="{vw:LocalizedTextExtension LocalizedText=@RecipeSystem.IE.Text3}" Margin="0,-3,0,0" PreviewTouchDown="Btn2_PreviewTouchDown">
+                            <DataGrid x:Name="toExport" ItemsSource="{Binding RecipesToExport}" Style="{DynamicResource DG_Standart}" BorderThickness="2" BorderBrush="{DynamicResource FP_BorderBrush}" RowStyle="{DynamicResource DGR_IE}" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" SelectionChanged="DataGrid_SelectionChanged">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.IE.Text5}" Width="150">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <vw:CheckBox HorizontalAlignment="Center" Width="35" Height="35" IsChecked="{Binding Path=isSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.IE.Text15}" Binding="{Binding Type}" Width="150"/>
+                                    <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.IE.Text14}" Binding="{Binding Name}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </TabItem>
+                    </TabControl>
+                    <Border Grid.Row="3" VerticalAlignment="Bottom" Background="{DynamicResource FP_Red}"  Height="2" CornerRadius="2" />
+
+                    <Grid  Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <vw:Button x:Name="sopen" Grid.Column="0"  Command="{Binding SelectSCommand}" Height="50"  Width="200" LocalizableText="@RecipeSystem.IE.Text11" HorizontalContentAlignment="Center" Style="{DynamicResource B_Blue_ns}" Grid.Row="0" />
+
+                        <vw:Button x:Name="fopen" Grid.Column="1" Command="{Binding SelectFCommand}" Height="50"  Width="200" LocalizableText="@RecipeSystem.IE.Text12" HorizontalContentAlignment="Center" Style="{DynamicResource B_Blue_ns}" Grid.Row="1" />
+                        <vw:Button x:Name="imp" Grid.Column="3" Command="{Binding ImportCommand}" Height="50"  Width="200" LocalizableText="@RecipeSystem.IE.Text2" Style="{DynamicResource B_Red_ns}" Grid.Row="2" />
+                        <vw:Button x:Name="exp" Grid.Column="3"  Command="{Binding ExportCommand}" Height="50"  Width="200" LocalizableText="@RecipeSystem.IE.Text3" Style="{DynamicResource B_Blue_ns}" Grid.Row="2" />
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+        </Border>
+        <Grid Grid.RowSpan="5" Margin="0,0,0,0"  Background="{DynamicResource DialogSurroundBrush}" Visibility="{Binding IsLoading}">
+            <vw:Border Background="White"  Opacity="0.7" CornerRadius="10" Margin="0,0,0,0"  Height="150" Width="290" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Effect>
+                    <BlurEffect Radius="10"/>
+                </Border.Effect>
+            </vw:Border>
+            <Border Background="{DynamicResource FP_Wait}"  Opacity="0.7" Margin="0,0,0,0"  CornerRadius="10" Height="140" Width="280" BorderThickness="3" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <Image x:Name="gif" Stretch="None"/>
+            </Border>
+
+        </Grid>
+    </Grid>
+</vw:View>

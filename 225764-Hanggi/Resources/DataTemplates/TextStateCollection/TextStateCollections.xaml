@@ -1,0 +1,89 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <vw:TextStateCollection x:Key="Steps">
+        <vw:TextState LocalizableText="@Lists.Steps.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text2" Value="5" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text3" Value="6" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text4" Value="7" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text5" Value="10" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text6" Value="11" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text7" Value="12" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text8" Value="13" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text9" Value="15" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text10" Value="16" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text11" Value="17" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text12" Value="20" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text13" Value="21" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text14" Value="22" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text15" Value="23" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text16" Value="25" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text17" Value="26" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text18" Value="27" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text19" Value="30" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text20" Value="31" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text21" Value="32" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text22" Value="33" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text23" Value="35" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text24" Value="36" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text25" Value="37" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text26" Value="40" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text27" Value="41" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text28" Value="42" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text29" Value="43" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text30" Value="45" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text31" Value="46" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text32" Value="47" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text33" Value="50" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text34" Value="51" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text35" Value="52" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text36" Value="53" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text37" Value="55" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text38" Value="56" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text39" Value="57" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text40" Value="60" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text41" Value="61" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text42" Value="62" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text43" Value="63" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text44" Value="65" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text45" Value="66" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text46" Value="67" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text47" Value="70" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text48" Value="71" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text49" Value="72" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text50" Value="73" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text51" Value="75" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text52" Value="76" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text53" Value="77" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text54" Value="80" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text55" Value="81" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text56" Value="82" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text57" Value="83" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text58" Value="85" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text59" Value="86" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text60" Value="87" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text61" Value="90" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text62" Value="91" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text63" Value="92" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text64" Value="93" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text65" Value="95" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text66" Value="96" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text67" Value="97" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text68" Value="100" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text69" Value="101" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text70" Value="102" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text71" Value="103" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text72" Value="105" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text73" Value="106" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text74" Value="107" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text75" Value="110" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text76" Value="111" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text77" Value="119" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text78" Value="120" />
+        <vw:TextState LocalizableText="@Lists.Steps.Text79" Value="121" />
+    </vw:TextStateCollection>
+
+    
+
+</ResourceDictionary>

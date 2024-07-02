@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/225764-Hanggi;component/Resources/DataTemplates/Symbol/S_General.xaml" />
+        <ResourceDictionary Source="/225764-Hanggi;component/Resources/DataTemplates/Symbol/S_AppBar.xaml" />
+        <ResourceDictionary Source="/225764-Hanggi;component/Resources/DataTemplates/Symbol/S_MachineOverview.xaml" />
+        <ResourceDictionary Source="/225764-Hanggi;component/Resources/DataTemplates/Symbol/S_MessageBox.xaml" />
+        <ResourceDictionary Source="/225764-Hanggi;component/Resources/DataTemplates/Symbol/S_Recipe.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

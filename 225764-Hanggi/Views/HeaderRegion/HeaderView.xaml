@@ -1,0 +1,28 @@
+﻿<vw:View x:Class="HMI.HeaderView"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:vw="http://inosoft.com/visiwin7"
+            Height="80" Width="1920" Background="{DynamicResource FP_Dark}">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:Button x:Name="barcode" Height="48" Width="80" Margin="800,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Style="{DynamicResource B_BarcodeScanner}" IsDefault="True" SymbolResourceKey="BarcodeScanner" Click="Button_Click">
+          
+        </vw:Button>
+        <vw:TextBlock x:Name="AlarmText" Padding="10,5,0,0" Margin="0,48,0,0" Background="{DynamicResource FP_Red}" Foreground="White" FontWeight="SemiBold" FontSize="16" />
+        <Border Background="White" Margin="3,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="42" Width="110" CornerRadius="2" >
+            <vw:SymbolPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Symbol="{DynamicResource H_ForplanLogo}" />
+
+        </Border>
+
+        <Rectangle Height="8" HorizontalAlignment="Stretch" Fill="{DynamicResource FP_Red}" VerticalAlignment="Bottom" >
+            <Rectangle.Effect>
+                <DropShadowEffect Color="White" Direction="270" Opacity="0.7"/>
+            </Rectangle.Effect>
+        </Rectangle>
+	    <vw:Clock HorizontalAlignment="Right" FontSize="12" FontWeight="Normal" Foreground="#FFFFFFFF" FontFamily="Segoe UI" Margin="0,0,8,56" Width="250" Height="24" HorizontalContentAlignment="Right" FormatDate="@NamedLongDate" FormatTime="@ShortTime"/>
+        <vw:Clock HorizontalAlignment="Right" DateTimeMode="TimeOnly" FontSize="14" Foreground="#FFFFFFFF" FontFamily="Segoe UI" FontWeight="Bold" Margin="0,24,8,0" Width="151.5" Height="24" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+       
+
+
+    </Grid>
+</vw:View>

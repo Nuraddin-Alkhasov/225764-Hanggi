@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="HMI.UserControls.E_Step"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" x:Name="_this">
+    <Grid x:Name="A" Opacity="0" Margin="0,6,0,0" Height="236" Width="1796" Loaded="UserControl_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+      
+        <Grid x:Name="step" Grid.Column="1" VerticalAlignment="Center" Opacity="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <vw:TextVarIn x:Name="note" Grid.ColumnSpan="10" Margin="0,8,3,5" TextLengthMax="200" Padding="65,0,0,0" HorizontalContentAlignment="Left" LocalizableLabelText="@RecipeSystem.Text28" Style="{DynamicResource TVI_Main}" />
+            <Border Grid.Row="4" Grid.ColumnSpan="10"  Height="3" Background="{DynamicResource FP_Blue_Gradient}"  VerticalAlignment="Bottom" Margin="0,0,0,0" >
+                <Border.Effect>
+                    <DropShadowEffect Color="White" Direction="270" Opacity="0"/>
+                </Border.Effect>
+            </Border>
+            <StackPanel x:Name="steptime" Margin="0,2,3,2" Orientation="Horizontal" Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" HorizontalAlignment="Center" Height="45">
+                <vw:NumericVarIn x:Name="sth" Width="49" RawLimitMin="0" RawLimitMax="99" Style="{DynamicResource NVI_Main}" Tag="-"/>
+                <TextBlock Text=":"  Foreground="White" VerticalAlignment="Center" Margin="1,0,1,0" FontSize="20" FontWeight="SemiBold"/>
+                <vw:NumericVarIn x:Name="stm" Width="49" RawLimitMin="0" RawLimitMax="59" Style="{DynamicResource NVI_Main}" Tag="-"/>
+                <TextBlock Text=":"  Foreground="White" VerticalAlignment="Center" Margin="1,0,1,0" FontSize="20" FontWeight="SemiBold"/>
+                <vw:NumericVarIn x:Name="sts" Width="49" RawLimitMin="0" RawLimitMax="59" Style="{DynamicResource NVI_Main}" Tag="-"/>
+            </StackPanel>
+            <vw:NumericVarIn x:Name="count" Grid.Row="1" Grid.RowSpan="1" Grid.Column="1" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="99999" HorizontalContentAlignment="Center" Style="{DynamicResource NVI_Main}"  />
+            <vw:NumericVarIn x:Name="speed" Grid.Row="1" Grid.RowSpan="1" Grid.Column="2" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="999" HorizontalContentAlignment="Center" Style="{DynamicResource NVI_Main}" LocalizableUnitText="@Units.Rpm"/>
+            <vw:NumericVarIn x:Name="change" Grid.Row="1" Grid.RowSpan="1" Grid.Column="3" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="99" HorizontalContentAlignment="Center" Style="{DynamicResource NVI_Main}"/>
+            <vw:TextVarIn x:Name="dimension1" Grid.Row="1" Grid.Column="4" Margin="3,2" TextLengthMin="0" Height="45" TextLengthMax="20" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:TextVarIn x:Name="dimension2" Grid.Row="2" Grid.Column="4" Margin="3,2" TextLengthMin="0" Height="45" TextLengthMax="20" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:TextVarIn x:Name="dimension3" Grid.Row="3" Grid.Column="4" Margin="3,2" TextLengthMin="0" Height="45" TextLengthMax="20" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:NumericVarIn x:Name="weight1" Grid.Row="1" Grid.Column="5" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="99" Style="{DynamicResource NVI_Main}" HorizontalContentAlignment="Center" FormatString="0.00" LocalizableUnitText="@Units.kg"/>
+            <vw:NumericVarIn x:Name="weight2" Grid.Row="2" Grid.Column="5" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="99" Style="{DynamicResource NVI_Main}" HorizontalContentAlignment="Center" FormatString="0.00" LocalizableUnitText="@Units.kg"/>
+            <vw:NumericVarIn x:Name="weight3" Grid.Row="3" Grid.Column="5" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="99" Style="{DynamicResource NVI_Main}" HorizontalContentAlignment="Center" FormatString="0.00" LocalizableUnitText="@Units.kg"/>
+            <vw:TextVarIn x:Name="atype" Grid.Row="1" Grid.RowSpan="1" Grid.Column="6" Margin="3,2" Height="45" TextLengthMin="0" TextLengthMax="10" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:NumericVarIn x:Name="aweight1" Grid.Row="1" Grid.Column="7" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="9999" Style="{DynamicResource NVI_Main}"  HorizontalContentAlignment="Center" LocalizableUnitText="@Units.g"/>
+            <vw:NumericVarIn x:Name="aweight2" Grid.Row="2" Grid.Column="7" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="9999" Style="{DynamicResource NVI_Main}"  HorizontalContentAlignment="Center" LocalizableUnitText="@Units.g"/>
+            <vw:NumericVarIn x:Name="aweight3" Grid.Row="3" Grid.Column="7" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="9999" Style="{DynamicResource NVI_Main}"  HorizontalContentAlignment="Center" LocalizableUnitText="@Units.g"/>
+            <vw:TextVarIn x:Name="ftype1" Grid.Row="1" Grid.Column="8" Margin="3,2" TextLengthMin="0" Height="45" TextLengthMax="10" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:TextVarIn x:Name="ftype2" Grid.Row="2" Grid.Column="8" Margin="3,2" TextLengthMin="0" Height="45" TextLengthMax="10" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:TextVarIn x:Name="ftype3" Grid.Row="3" Grid.Column="8" Margin="3,2" TextLengthMin="0" Height="45" TextLengthMax="10" Style="{DynamicResource TVI_Main}" HorizontalContentAlignment="Center"/>
+            <vw:NumericVarIn x:Name="fweight1" Grid.Row="1" Grid.Column="9" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="9999" Style="{DynamicResource NVI_Main}" HorizontalContentAlignment="Center" LocalizableUnitText="@Units.ml"/>
+            <vw:NumericVarIn x:Name="fweight2" Grid.Row="2" Grid.Column="9" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="9999" Style="{DynamicResource NVI_Main}" HorizontalContentAlignment="Center" LocalizableUnitText="@Units.ml"/>
+            <vw:NumericVarIn x:Name="fweight3" Grid.Row="3" Grid.Column="9" Margin="3,2" RawLimitMin="0" Height="45" RawLimitMax="9999" Style="{DynamicResource NVI_Main}" HorizontalContentAlignment="Center" LocalizableUnitText="@Units.ml"/>
+        </Grid>
+        <Border Margin="-2" Background="White" CornerRadius="5" >
+            <Border.Effect>
+                <BlurEffect Radius="10"/>
+            </Border.Effect>
+        </Border>
+        <Border Background="{DynamicResource FP_Gray_Gradient}" CornerRadius="5" BorderThickness="3" BorderBrush="{DynamicResource FP_Blue_Gradient}" Margin="3,0,3,0" >
+            <StackPanel>
+                <vw:TextBlock x:Name="steptext" Foreground="White"  Margin="0,75,0,0"  TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="14" FontWeight="SemiBold"/>
+                <vw:TextVarIn x:Name="stepnote" Grid.Row="1" Opacity="0" Height="50" TextLengthMin="0" TextLengthMax="20" Margin="3,20,3,0" TextAlignment="Center" VerticalAlignment="Center" FontSize="12" Style="{DynamicResource TVI_Main}"  />
+
+                <vw:Button x:Name="deletestep" Height="108" Grid.Row="2" Margin="3,10,3,0" Opacity="0" Style="{DynamicResource B_Red_ns}" LocalizableText="@Buttons.Text9" Click="Delete_Click"  />
+            </StackPanel>
+        </Border>
+        <Grid x:Name="addView" Grid.Column="1" Grid.ColumnSpan="13" Grid.RowSpan="2" Opacity="1" Visibility="Visible" Margin="1,1,3,1">
+            <Rectangle Fill="Transparent" Stroke="{DynamicResource FP_Red_Gradient}" StrokeThickness="2" StrokeDashArray="4" RadiusX="5" RadiusY="5" />
+            <vw:Button x:Name="Addbtn"  SymbolResourceKey="D_Add"  BorderThickness="0"  Style="{DynamicResource B_Dashboard_Add}" Click="Add_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

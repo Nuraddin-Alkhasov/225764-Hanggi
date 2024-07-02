@@ -1,0 +1,23 @@
+﻿<vw:View
+    x:Class="HMI.Views.Cognex"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	 Height="250" Background="Transparent">
+
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <vw:TextVarOut x:Name="status" Height="50" Width="350" Background="LightGray" VariableName="__UNLINKED_BSTR" LabelText="Status" Style="{DynamicResource TVO_Main}"/>
+            <vw:Button x:Name="CheckConnection" Grid.Row="3" Margin="5,0,0,0" Height="50" Width="200" Style="{DynamicResource B_Gray}" Text="Check Barcode Status" Click="CheckConnection_Click" LocalizableText="@Cognex.Text7"/>
+
+        </StackPanel>
+        <vw:Button x:Name="openConnection" Grid.Row="2" Height="50" Width="200" Style="{DynamicResource B_Gray}" Text="Open Connection"  Click="OpenConnection_Click" LocalizableText="@Cognex.Text1"/>
+        <vw:Button x:Name="closeConnection" Grid.Row="3"  Height="50" Width="200" Style="{DynamicResource B_Gray}" Text="Close Connection"  Click="CloseConnection_Click" LocalizableText="@Cognex.Text2"/>
+    </Grid>
+</vw:View>

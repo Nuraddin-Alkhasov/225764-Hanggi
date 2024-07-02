@@ -1,0 +1,36 @@
+﻿<vw:View x:Class="HMI.Views.MainRegion.MO_Ergospins_9_16"
+	 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1832" Height="890" Background="Transparent" Loaded="LayoutRoot_Loaded">
+
+    <Grid Grid.Row="1">
+            <Grid x:Name="ergospins"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+              
+            </Grid>
+        <vw:Border Background="{DynamicResource FP_Red_Gradient}" Height="10" Margin="0,0,0,446" VerticalAlignment="Bottom">
+            <Border.Effect>
+                <DropShadowEffect Color="White" Direction="270" Opacity="0.7"/>
+            </Border.Effect>
+        </vw:Border>
+
+        <vw:Border Background="{DynamicResource FP_Red_Gradient}" Height="10" Margin="0,0,0,1" VerticalAlignment="Bottom">
+            <Border.Effect>
+                <DropShadowEffect Color="White" Direction="270" Opacity="0.7"/>
+            </Border.Effect>
+        </vw:Border>
+    </Grid>
+
+  
+    
+</vw:View>

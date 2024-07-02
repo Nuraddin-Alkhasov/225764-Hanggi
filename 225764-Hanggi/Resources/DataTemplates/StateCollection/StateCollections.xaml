@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+
+    <vw:StateCollection x:Key="Picker_Steps">
+        <vw:State LocalizableText="@Lists.Steps.Text5" Value="1" />
+        <vw:State LocalizableText="@Lists.Steps.Text12" Value="2" />
+        <vw:State LocalizableText="@Lists.Steps.Text19" Value="3" />
+        <vw:State LocalizableText="@Lists.Steps.Text26" Value="4" />
+        <vw:State LocalizableText="@Lists.Steps.Text33" Value="5" />
+        <vw:State LocalizableText="@Lists.Steps.Text40" Value="6" />
+        <vw:State LocalizableText="@Lists.Steps.Text47" Value="7" />
+        <vw:State LocalizableText="@Lists.Steps.Text54" Value="8" />
+        <vw:State LocalizableText="@Lists.Steps.Text61" Value="9" />
+        <vw:State LocalizableText="@Lists.Steps.Text68" Value="10" />
+    </vw:StateCollection>
+    <vw:StateCollection x:Key="Picker_BasketSize">
+        <vw:State Text="1" Value="1" />
+        <vw:State Text="2" Value="2" />
+        <vw:State Text="3" Value="3" />
+        <vw:State Text="6" Value="6" />
+    </vw:StateCollection>
+    <vw:StateCollection x:Key="Picker_BasketCount">
+        <vw:State Text="2" Value="2" />
+        <vw:State Text="4" Value="4" />
+    </vw:StateCollection>
+
+</ResourceDictionary>

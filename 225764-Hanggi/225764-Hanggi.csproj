@@ -1,0 +1,988 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{EA007CC4-A8B1-490D-89BF-3E72B78FE761}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HMI</RootNamespace>
+    <AssemblyName>225764-Hanggi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FP_ICO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cognex.DataMan.SDK.PC">
+      <HintPath>..\..\223357-IMEX\FPV\Libs\Cognex.DataMan.SDK.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.Utils.PC">
+      <HintPath>..\..\223357-IMEX\FPV\Libs\Cognex.DataMan.SDK.Utils.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.4.0, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft-WindowsAPICodePack-Core.1.1.4\lib\net472\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.4.0, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft-WindowsAPICodePack-Shell.1.1.4\lib\net472\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VisiWin7.System.WPF" />
+    <Reference Include="VisiWin7.View.WPF" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="VisiWin7.Styles.WPF" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DB\Custom Objects\LocalDBAdapter.cs" />
+    <Compile Include="Interfaces\General\IBackup.cs" />
+    <Compile Include="Interfaces\General\IIni.cs" />
+    <Compile Include="Interfaces\Handshackes\IMarineBlue.cs" />
+    <Compile Include="Interfaces\Handshackes\IOrange.cs" />
+    <Compile Include="Interfaces\Handshackes\IWaterBlue.cs" />
+    <Compile Include="Interfaces\Handshackes\IRubinRed.cs" />
+    <Compile Include="Interfaces\Handshackes\ITurquoiseGreen.cs" />
+    <Compile Include="Interfaces\Handshackes\IYellowGreen.cs" />
+    <Compile Include="Interfaces\Handshackes\IDarkBlue.cs" />
+    <Compile Include="Interfaces\Handshackes\ILightBlue.cs" />
+    <Compile Include="Interfaces\Handshackes\IPink.cs" />
+    <Compile Include="Interfaces\Handshackes\IMelonYellow.cs" />
+    <Compile Include="Interfaces\Periferical Devices\ICognex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="app.config" />
+    <EmbeddedResource Include="DB\localDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Resources\LocalResources.cs" />
+    <Compile Include="Resources\UserControls\Extern\E_Step.xaml.cs">
+      <DependentUpon>E_Step.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Recipe\Views\R_Step.xaml.cs">
+      <DependentUpon>R_Step.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Stations\MV_ErgospinS.xaml.cs">
+      <DependentUpon>MV_ErgospinS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Stations\MV_Ergospin.xaml.cs">
+      <DependentUpon>MV_Ergospin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Custom Objects\Cognex.cs" />
+    <Compile Include="Services\Custom Objects\DoBackup.cs" />
+    <Compile Include="Services\Custom Objects\VWSafeStart.cs" />
+    <Compile Include="Services\General\Service_Backup.cs" />
+    <Compile Include="Services\General\Service_Ini.cs" />
+    <Compile Include="Services\Handshackes\Service_DarkBlue.cs" />
+    <Compile Include="Services\Handshackes\Service_LightBlue.cs" />
+    <Compile Include="Services\Handshackes\Service_MarineBlue.cs" />
+    <Compile Include="Services\Handshackes\Service_WaterBlue.cs" />
+    <Compile Include="Services\Handshackes\Service_RubinRed.cs" />
+    <Compile Include="Services\Handshackes\Service_TurquoiseGreen.cs" />
+    <Compile Include="Services\Handshackes\Service_Pink.cs" />
+    <Compile Include="Services\Handshackes\Service_Orange.cs" />
+    <Compile Include="Services\Handshackes\Service_YellowGreen.cs" />
+    <Compile Include="Services\Handshackes\Service_MelonYellow.cs" />
+    <Compile Include="Services\Periferical Devices\Service_Cognex.cs" />
+    <Compile Include="Views\AppbarRegion\Adapters\AppbarViewAdapter.cs" />
+    <Compile Include="Views\AppbarRegion\AppbarView.xaml.cs">
+      <DependentUpon>AppbarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogRegion\Dialog\Adapters\DialogAdapter.cs" />
+    <Compile Include="Views\DialogRegion\Dialog\Custom Objects\DialogResultEventArgs.cs" />
+    <Compile Include="Views\DialogRegion\Dialog\Views\DialogView.xaml.cs">
+      <DependentUpon>DialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogRegion\Service\Views\ServiceScreen.xaml.cs">
+      <DependentUpon>ServiceScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmptyView.xaml.cs">
+      <DependentUpon>EmptyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderRegion\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderRegion\Periferical Devices\Cognex.xaml.cs">
+      <DependentUpon>Cognex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Extern\Adapters\ExternAdapter.cs" />
+    <Compile Include="Views\MainRegion\Extern\Adapters\ExternBindingAdapter.cs" />
+    <Compile Include="Views\MainRegion\Extern\Extern_Browser.xaml.cs">
+      <DependentUpon>Extern_Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Extern\Extern_Binding.xaml.cs">
+      <DependentUpon>Extern_Binding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Extern\Extern_Selector.xaml.cs">
+      <DependentUpon>Extern_Selector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Extern\Extern_History.xaml.cs">
+      <DependentUpon>Extern_History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\DataPicker\Adapters\DataPickerAdapter.cs" />
+    <Compile Include="Views\MainRegion\Home\DataPicker\Custom Objects\ExternData.cs" />
+    <Compile Include="Views\MainRegion\Home\DataPicker\Custom Objects\ErgospinData.cs" />
+    <Compile Include="Views\MainRegion\Home\DataPicker\Views\DPR_EHistory.xaml.cs">
+      <DependentUpon>DPR_EHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\DataPicker\Views\DPR_Selector.xaml.cs">
+      <DependentUpon>DPR_Selector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\DataPicker\Views\MO_DataPicker.xaml.cs">
+      <DependentUpon>MO_DataPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\DataPicker\Views\DPR_History.xaml.cs">
+      <DependentUpon>DPR_History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\DataPicker\Views\MO_DP_Ergospins_1_8.xaml.cs">
+      <DependentUpon>MO_DP_Ergospins_1_8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\DataPicker\Views\MO_DP_Ergospins_9_16.xaml.cs">
+      <DependentUpon>MO_DP_Ergospins_9_16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\MO_Ergospins_1_8.xaml.cs">
+      <DependentUpon>MO_Ergospins_1_8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\MO_Ergospins_9_16.xaml.cs">
+      <DependentUpon>MO_Ergospins_9_16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Home\MO_MainView.xaml.cs">
+      <DependentUpon>MO_MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Extern\Extern_Main.xaml.cs">
+      <DependentUpon>Extern_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Protocol_Main.xaml.cs">
+      <DependentUpon>Protocol_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeAdapter.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeCompareAdapter.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeIEAdapter.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeBindingAdapter.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\Barcode.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\ForplanRecipesIE.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\RecipeToImport.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\SiemensParser.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\MachineRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\Step.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\VWRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\VWVariable.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_Compare.xaml.cs">
+      <DependentUpon>Recipe_Compare.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_History.xaml.cs">
+      <DependentUpon>Recipe_History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_IE.xaml.cs">
+      <DependentUpon>Recipe_IE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_Binding.xaml.cs">
+      <DependentUpon>Recipe_Binding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_Browser.xaml.cs">
+      <DependentUpon>Recipe_Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_Main.xaml.cs">
+      <DependentUpon>Recipe_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_Selector.xaml.cs">
+      <DependentUpon>Recipe_Selector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxRegion\Custom Objects\MessageBoxTask.cs" />
+    <Compile Include="Views\MessageBoxRegion\MessageBoxView.xaml.cs">
+      <DependentUpon>MessageBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\AlphaTouchpadView.xaml.cs">
+      <DependentUpon>AlphaTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\DateTimeTouchpadView.xaml.cs">
+      <DependentUpon>DateTimeTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\NumericTouchpadView.xaml.cs">
+      <DependentUpon>NumericTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\PasswordTouchpadView.xaml.cs">
+      <DependentUpon>PasswordTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\WaitScreen\Custom Objects\WaitData.cs" />
+    <Compile Include="Views\TouchpadRegion\WaitScreen\Views\WaitScreen.xaml.cs">
+      <DependentUpon>WaitScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Resource Include="Resources\Images\MessageBox\mb_asterix_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_error_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_exclamation_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_hand_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_information_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_question_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_stop_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_warning_48x48.png" />
+    <AppDesigner Include="Properties\" />
+    <Page Include="Resources\Brushes\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\Color\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\LinearGradientBrush\LinearGradientBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\RadialGradientBrush\RadialGradientBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\SolidColorBrush\SolidColorBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\Buttons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_AppBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_BarcodeScanner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Blue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Blue_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Close.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Dashboard_Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Gray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Gray_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Keyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Material.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Red.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Red_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Station.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ComboBox\CB_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ComboBox\ComboBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridCell\DataGridCells.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridCell\DGC_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridColumnHeadersPresenter\DataGridCoumnHeaders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridColumnHeadersPresenter\DGCHP_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridCoumnHeader\DataGridCoumnHeaders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridCoumnHeader\DGCH_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridRow\DataGridRows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridRow\DGR_IE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridRow\DGR_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGrid\DataGrids.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGrid\DG_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Gauge\RealisticGaugeStyle_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Gauge\RealisticGaugeStyle_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Gauge\RealisticGaugeStyle_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Gauge\Gauges.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupBox\GB_Group.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupBox\GroupBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\LBI_PanoramaNavigation_H.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\ListBoxItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBox\LB_PanoramaNavigation_H.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBox\ListBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NavigationRadioButton\NavigationRadioButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NavigationRadioButton\NRB_AppBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarIn\NumericVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarIn\NVI_Keyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarIn\NVI_Time.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarIn\NVI_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarOut\NumericVarOuts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarOut\NVO_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TabItem\TabItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TabItem\TI_Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TextVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TVI_Keyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TVI_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TVI_RecipeBrowser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ProgressBar\PB_Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ProgressBar\ProgressBars.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ScrollViewer\SV_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ScrollViewer\ScrollViewers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextBlock\TB_Center.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextBlock\TB_Right.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextBlock\TextBlocks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarOut\TextVarOuts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarOut\TVO_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Thumb\Thumbs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Thumb\T_Standart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToggleButton\B_Ergoloaded.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToggleButton\B_Ergocheck.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToggleButton\ToggleButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TouchKeyboard\AlphaTouchKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TouchKeyboard\NumericTouchKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TouchKeyboard\TouchKeyboards.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\UpDownNumericVarIn\UDNVI_TimePad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\UpDownNumericVarIn\UpDownNumericVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\DataTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\StateCollection\StateCollections.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\Symbols.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_Recipe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_AppBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_MachineOverview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_General.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\TextStateCollection\TextStateCollections.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Converters\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\LocalizedResources\TouchKeyboardLayoutResources.de-DE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\LocalizedResources\TouchKeyboardLayoutResources.en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\System\TouchKeyboardResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Extern\E_Step.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Recipe\Views\R_Step.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Stations\MV_ErgospinS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Stations\MV_Ergospin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AppbarRegion\AppbarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DialogRegion\Dialog\Views\DialogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DialogRegion\Service\Views\ServiceScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EmptyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HeaderRegion\HeaderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HeaderRegion\Periferical Devices\Cognex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Extern\Extern_Browser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Extern\Extern_Binding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Extern\Extern_Selector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Extern\Extern_History.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\DataPicker\Views\DPR_EHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\DataPicker\Views\DPR_Selector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\DataPicker\Views\MO_DataPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\DataPicker\Views\DPR_History.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\DataPicker\Views\MO_DP_Ergospins_1_8.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\DataPicker\Views\MO_DP_Ergospins_9_16.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\MO_Ergospins_1_8.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\MO_Ergospins_9_16.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Home\MO_MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Extern\Extern_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Protocol_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_Compare.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_History.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_IE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_Binding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_Browser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_Selector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessageBoxRegion\MessageBoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SplashWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\AlphaTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\DateTimeTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\NumericTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\PasswordTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\WaitScreen\Views\WaitScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FP_ICO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.home.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.turnoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\HeaderRegion.png" />
+    <EmbeddedResource Include="Resources\Images\Loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.close.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.open.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.parameters.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.protocol.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.recipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_DarkBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.languages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_LightBlue.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_MarineBlue.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_MelonYellow.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_Pink.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_YellowGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs\" />
+    <Folder Include="Resources\UserControls\Recipe\Adapters\" />
+    <Folder Include="Services\Protocol\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_DarkBlue_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_LightBlue_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_MarineBlue_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_MelonYellow_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_Pink_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_YellowGreen_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\PlanetDirection.png" />
+    <Resource Include="Resources\Images\Recipe\PlanetRatio.png" />
+    <Resource Include="Resources\Images\Recipe\PlanetSpeed.png" />
+    <Resource Include="Resources\Images\Recipe\RotorDirection.png" />
+    <Resource Include="Resources\Images\Recipe\RotorSpeed.png" />
+    <Resource Include="Resources\Images\Recipe\RotorTime.png" />
+    <Resource Include="Resources\Images\Recipe\TiltAngle2.png" />
+    <Resource Include="Resources\Images\Recipe\TiltMode.png" />
+    <Resource Include="Resources\Images\Recipe\TiltSpeed.png" />
+    <Resource Include="Resources\Images\Recipe\TiltTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\TiltAngle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\Glasses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\StepCopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\Arrows.png" />
+    <Resource Include="Resources\Images\Recipe\Rotate.png" />
+    <Resource Include="Resources\Images\Recipe\RotateLeft.png" />
+    <Resource Include="Resources\Images\Recipe\RotateRight.png" />
+    <Resource Include="Resources\Images\Recipe\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\Glasses2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Recipe\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\Loading_s.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\BarcodeScanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.extern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_Orange.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_Orange_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_TurquoiseGreen.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_TurquoiseGreen_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Ergospin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_RubinRed.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_RubinRed_s.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_WaterBlue.png" />
+    <Resource Include="Resources\Images\MachineOverview\Ergospin_WaterBlue_s.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Resources\LocalizedResources\*.*" "$(TargetDir)Resources\LocalizedResources\" /S /Y /E</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+      <UserProperties VisiWinProjectName="225764-Hanggi" VisiWinVersion="7.2" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>

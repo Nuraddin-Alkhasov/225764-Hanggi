@@ -1,0 +1,11 @@
+System information:
+Version                                  | VisiWin7 7.2
+Framework                                | DotNet
+Project                                  | Single
+VisiWin.S7_TIA.Brw.dll           | 3.0.1.54(Debug=False)
+VisiWin.Browser.Components.Shared.dll | 7.0.0.40(Debug=False)
+
+Messages
+26/10/2020 11:29:04   | Message | Attention: Some items in the PLC project contain special characters. | TIAParser.FormatName() | 
+26/10/2020 11:29:04   | Message | Datatype "S7_WString" of item "PLC.Blocks.DB_Rez_Gewählt.Rez_Name" is not supported! | TIAParser.CreateItemInfo() | 
+26/10/2020 11:29:04   | Message | Datatype "S7_WString" of item "PLC.Blocks.DB_Rez_Aktiv.Rez_Name" is not supported! | TIAParser.CreateItemInfo() | 

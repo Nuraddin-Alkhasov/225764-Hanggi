@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Metadata xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns="clr-namespace:VisiWin.ProjectDeployment;assembly=VisiWin7.Essentials">
+	<Metadata.Entries>
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\225764-Hanggi.exe" RelativeFilePath="225764-Hanggi.exe" LastWriteTime="06/02/2022 13:15:23" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\225764-Hanggi.exe.config" RelativeFilePath="225764-Hanggi.exe.config" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Cognex.DataMan.CogNamer.PC.dll" RelativeFilePath="Cognex.DataMan.CogNamer.PC.dll" LastWriteTime="07/20/2021 15:10:34" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Cognex.DataMan.SDK.PC.dll" RelativeFilePath="Cognex.DataMan.SDK.PC.dll" LastWriteTime="07/20/2021 15:10:34" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Cognex.DataMan.SDK.Utils.PC.dll" RelativeFilePath="Cognex.DataMan.SDK.Utils.PC.dll" LastWriteTime="07/20/2021 15:10:34" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Microsoft.WindowsAPICodePack.dll" RelativeFilePath="Microsoft.WindowsAPICodePack.dll" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll" RelativeFilePath="Microsoft.WindowsAPICodePack.Shell.dll" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml" RelativeFilePath="Microsoft.WindowsAPICodePack.Shell.xml" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Microsoft.WindowsAPICodePack.xml" RelativeFilePath="Microsoft.WindowsAPICodePack.xml" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\System.Data.SQLite.dll" RelativeFilePath="System.Data.SQLite.dll" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\System.Data.SQLite.xml" RelativeFilePath="System.Data.SQLite.xml" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\System.IO.Compression.ZipFile.dll" RelativeFilePath="System.IO.Compression.ZipFile.dll" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\System.Windows.Interactivity.dll" RelativeFilePath="System.Windows.Interactivity.dll" LastWriteTime="10/02/2021 10:55:08" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\VisiWin7.Styles.WPF.dll" RelativeFilePath="VisiWin7.Styles.WPF.dll" LastWriteTime="02/18/2022 07:37:58" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\VisiWin7.System.WPF.dll" RelativeFilePath="VisiWin7.System.WPF.dll" LastWriteTime="02/18/2022 07:37:44" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\VisiWin7.View.WPF.dll" RelativeFilePath="VisiWin7.View.WPF.dll" LastWriteTime="02/18/2022 07:37:56" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\VisiWin7.View.WPF.xml" RelativeFilePath="VisiWin7.View.WPF.xml" LastWriteTime="10/02/2021 10:55:54" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\WpfAnimatedGif.dll" RelativeFilePath="WpfAnimatedGif.dll" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\WpfAnimatedGif.xml" RelativeFilePath="WpfAnimatedGif.xml" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\DB\localDB.db" RelativeFilePath="DB\localDB.db" LastWriteTime="05/23/2022 16:23:10" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\Test-Brugg.R" RelativeFilePath="Recipes\Ergospin\Test-Brugg.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\Test-Brugg2.R" RelativeFilePath="Recipes\Ergospin\Test-Brugg2.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\Test-Nov.R" RelativeFilePath="Recipes\Ergospin\Test-Nov.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\Test-Nov2.R" RelativeFilePath="Recipes\Ergospin\Test-Nov2.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\Test-v.R" RelativeFilePath="Recipes\Ergospin\Test-v.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\Test-v2.R" RelativeFilePath="Recipes\Ergospin\Test-v2.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Ergospin\zzz18.R" RelativeFilePath="Recipes\Ergospin\zzz18.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Extern\TEEEST.R" RelativeFilePath="Recipes\Extern\TEEEST.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Extern\Test2.R" RelativeFilePath="Recipes\Extern\Test2.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Extern\Test3.R" RelativeFilePath="Recipes\Extern\Test3.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Extern\Test4.R" RelativeFilePath="Recipes\Extern\Test4.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Extern\Test5.R" RelativeFilePath="Recipes\Extern\Test5.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Recipes\Extern\Test6.R" RelativeFilePath="Recipes\Extern\Test6.R" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Resources\Images\Loading.gif" RelativeFilePath="Resources\Images\Loading.gif" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Resources\Images\Loading_s.gif" RelativeFilePath="Resources\Images\Loading_s.gif" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Resources\LocalizedResources\TouchKeyboardLayoutResources.de-DE.xaml" RelativeFilePath="Resources\LocalizedResources\TouchKeyboardLayoutResources.de-DE.xaml" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\Resources\LocalizedResources\TouchKeyboardLayoutResources.en-US.xaml" RelativeFilePath="Resources\LocalizedResources\TouchKeyboardLayoutResources.en-US.xaml" LastWriteTime="05/23/2022 16:23:11" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\x64\SQLite.Interop.dll" RelativeFilePath="x64\SQLite.Interop.dll" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+		<MetadataEntry FilePath="C:\GitHub\225764-Hanggi\225764-Hanggi\bin\Debug\x86\SQLite.Interop.dll" RelativeFilePath="x86\SQLite.Interop.dll" LastWriteTime="05/23/2022 16:23:12" Attributes="Archive" />
+	</Metadata.Entries>
+</Metadata>

@@ -1,0 +1,67 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+
+    <DataTemplate x:Key="ErgospinDarkBlue">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_DarkBlue.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinLightBlue">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_LightBlue.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinMarineBlue">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_MarineBlue.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinMelonYellow">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_MelonYellow.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinPink">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_Pink.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinYellowGreen">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_YellowGreen.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinOrange">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_Orange.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinTurquoiseGreen">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_TurquoiseGreen.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinRubinRed">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_RubinRed.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinWaterBlue">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_WaterBlue.png" Stretch="Fill" Width="450" Height="423" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ErgospinDarkBlue_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_DarkBlue_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinLightBlue_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_LightBlue_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinMarineBlue_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_MarineBlue_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinMelonYellow_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_MelonYellow_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinPink_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_Pink_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinYellowGreen_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_YellowGreen_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinOrange_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_Orange_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinTurquoiseGreen_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_TurquoiseGreen_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinRubinRed_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_RubinRed_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+    <DataTemplate x:Key="ErgospinWaterBlue_S">
+        <Image Source="/Resources/Images/MachineOverview/Ergospin_WaterBlue_s.png" Stretch="Fill" Width="160" Height="150" />
+    </DataTemplate>
+</ResourceDictionary>
